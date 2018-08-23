@@ -68,7 +68,7 @@ Debian/Ubuntu Linux Daemon Build Instructions
 	for qt:
 	sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev
 
-	git clone https://github.com/bitcoinzerotakeover/bitcoinzero
+	git clone https://github.com/BitcoinZeroOfficial/bitcoinzero
 
 	cd bitcoinzero
 	for vps:
@@ -99,7 +99,7 @@ Debian/Ubuntu Linux Daemon Build Instructions
 	data folder:
 	bitcoinzero
 
-	port 29100
+	port 29101
 	rpc port 29200
 
 Example bitcoinzero.conf Configuration
