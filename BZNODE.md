@@ -1,12 +1,12 @@
 Bznode Instructions and Notes
 =============================
- - Version 0.2.0
- - Date: 27 June 2018
+ - Version 0.1.0
+ - Date: 23 August 2018
 
 Prerequisites
 -------------
  - Ubuntu 16.04+
- - Port **29100** is open
+ - Port **29101** is open
  - Libraries to build from bitcoinzero source if you want to build it yourself
 
 Step 0. ON VPS: Acquire the binaries
@@ -24,7 +24,7 @@ Either
 	wget https://github.com/bitcoinzerotakeover/bitcoinzero/releases/download/chain/chainfiles.zip
 	unzip chainfiles.zip
 	cd ..
-	wget https://github.com/bitcoinzerotakeover/bitcoinzero/releases/download/4.0.3.9/linux-x64.tar.gz
+	wget https://github.com/bitcoinzerotakeover/bitcoinzero/releases/download/5.0.0.0/linux-x64.tar.gz
 	tar xvfz linux-x64.tar.gz
 	
 	./bitcoinzerod -daemon
@@ -43,12 +43,12 @@ or
 </details>
 	
 
-Step 1. ON VPS: Open port 29100 (Optional - only if firewall is running)
+Step 1. ON VPS: Open port 29101 (Optional - only if firewall is running)
 ----------------------
 **1.1.**  Run:
 
     sudo ufw allow ssh 
-    sudo ufw allow 29100
+    sudo ufw allow 29101
     sudo ufw default allow outgoing
     sudo ufw enable
 
@@ -69,9 +69,9 @@ Step 2. ON LOCAL MACHINE: First run on your Local Wallet
 
 <strong>2.3.</strong>  Get wallet address:
 
-    getaccountaddress XN1
+    getaccountaddress BZ1
 
-<strong>2.4.</strong>  Send to received address <strong>exactly 2000 BZX</strong> in <strong>1 transaction</strong>. Wait for 15 confirmations.
+<strong>2.4.</strong>  Send to received address <strong>exactly 10000 BZX</strong> in <strong>1 transaction</strong>. Wait for 15 confirmations.
 
 <strong>2.5.</strong>  Close the wallet
 </details>
@@ -96,7 +96,7 @@ Step 2. ON LOCAL MACHINE: First run on your Local Wallet
 
     ./bitcoinzero-cli getaccountaddress XN1
 
-<strong>2.4.</strong>  Send to received address <strong>exactly 2000 BZX</strong> in <strong>1 transaction</strong>. Wait for 15 confirmations.
+<strong>2.4.</strong>  Send to received address <strong>exactly 10000 BZX</strong> in <strong>1 transaction</strong>. Wait for 15 confirmations.
 
 <strong>2.5.</strong>  Stop daemon:
 
@@ -107,10 +107,10 @@ Step 2. ON LOCAL MACHINE: First run on your Local Wallet
 ## For both:
 
 **2.6.**  Create file **bznode.conf** (in **~/.bitcoinzero**, **C:\Users\USER\AppData\Roaming\bitcoinzero** or **~/Library/Application Support/bitcoinzero** depending on your Operating System) containing the following info:
- - LABEL: A one word name you make up to call your node (ex. XN1)
- - IP:PORT: Your bznode VPS's IP, and the port is always 29100.
+ - LABEL: A one word name you make up to call your node (ex. BZ1)
+ - IP:PORT: Your bznode VPS's IP, and the port is always 29101.
  - BZNODEPRIVKEY: This is the result of your "bznode genkey" from earlier.
- - TRANSACTION HASH: The collateral tx. hash from the 2000 BZX deposit.
+ - TRANSACTION HASH: The collateral tx. hash from the 10000 BZX deposit.
  - INDEX: The Index from the transaction hash
 
 To get TRANSACTION HASH, run:
@@ -163,7 +163,7 @@ Step 4. ON LOCAL MACHINE: Start the bznode
 
 For example:
 
-    ./bitcoinzero-cli bznode start-alias XN1
+    ./bitcoinzero-cli bznode start-alias BZ1
 
 <strong>4.2</strong>  To check node status:
 
