@@ -1,11 +1,7 @@
-Bitcoinzero [BZX] Core update 2018
+Bitcoinzero [BZX] Core 2018
 ===============================
 
 [![Build Status](https://travis-ci.org/bitcoinzerotakeover/bitcoinzero.svg?branch=master)](https://travis-ci.org/bitcoinzerotakeover/bitcoinzero)
-
-# **Bznodes alive!**
-# ** DO NOT USE ZERO FUNCTION UNTIL NEW PROTOCOL FULLY ADDED**
-# ** CURRENTLY DISABLED UNTIL NEXT RELEASE**
 
 Anonymous Zerocoin Protocol:
 https://en.wikipedia.org/wiki/Zerocoin
@@ -16,21 +12,21 @@ https://en.wikipedia.org/wiki/RSA_Factoring_Challenge
 Bitcoinzero
 ----------------
 * Coin Suffix: BZX
-* Algorithm:lyra2z330
-* Algo params: LYRA2(BEGIN(thash), 32, BEGIN(nVersion), 80, BEGIN(nVersion), 80, 2, 330, 256)
+* Algorithm: -
+* Algo params: -
 * Target Spacing: 150 Seconds
 * Retarget: every block
 * Confirmation: 6 Blocks
 * Maturity: 120 Blocks
-* Blocks: ~576 per day
-* Total Coins: 9,999,999 BZX
+* Blocks: -
+* Total Coins: 42,000,000 BZX
 * Min TX Fee: 0.001 BZX
 * Block Size: 4MB
 
 
 Net Parameters
 ----------------
-* P2P Port=29100
+* P2P Port=29101
 * RPC Port=29200
 * Client core=13.4
 * Client name=bitcoinzero.qt
